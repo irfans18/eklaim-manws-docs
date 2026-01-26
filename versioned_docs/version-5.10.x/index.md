@@ -10,6 +10,10 @@ sidebar_position: 0
 
 Dokumentasi ini berisi panduan lengkap integrasi dengan Web Service E-Klaim.
 
+:::tip Koleksi Postman
+Untuk mempercepat proses integrasi, Anda dapat menggunakan [Koleksi Postman Resmi E-Klaim](https://www.postman.com/pusbikes/e-klaim/overview).
+:::
+
 ## Daftar Isi
 
 - [I. SETUP](./01-setup/index.md)

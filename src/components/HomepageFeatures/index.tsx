@@ -1,7 +1,5 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
@@ -11,32 +9,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Mudah Diintegrasikan',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Manual Web Service ini dirancang agar mudah dipahami dan diimplementasikan
+        oleh tim IT Rumah Sakit untuk proses bridging yang lancar.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Dokumentasi Lengkap',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Mencakup penjelasan detail tentang setiap endpoint, parameter, dan
+        contoh request/response untuk meminimalkan kesalahan integrasi.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Standar Nasional',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Sesuai dengan standar interoperabilitas data kesehatan yang ditetapkan
+        oleh Kementerian Kesehatan Republik Indonesia.
       </>
     ),
   },
@@ -44,13 +42,13 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className="w-full px-4 md:w-1/3">
+      <div className="mb-4 text-center">
+        <Svg className="h-48 w-full md:h-56" role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className="px-4 text-center">
+        <Heading as="h3" className="mb-2 text-xl font-bold">{title}</Heading>
+        <p className="text-gray-600 dark:text-gray-400">{description}</p>
       </div>
     </div>
   );
@@ -58,9 +56,9 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+    <section className="flex w-full items-center justify-center py-16">
+      <div className="container mx-auto">
+        <div className="flex flex-wrap justify-center gap-y-8 md:gap-y-0">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
