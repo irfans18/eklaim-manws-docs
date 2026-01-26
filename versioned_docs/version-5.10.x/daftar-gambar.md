@@ -1,30 +1,10 @@
 ---
-title: "Getting Started"
-sidebar_label: "Getting Started"
-sidebar_position: 0
+title: "Daftar Gambar"
+sidebar_label: "Daftar Gambar"
+sidebar_position: 99
 ---
 
-# Getting Started
-
-**Untuk Build 5.10.x**
-
-Dokumentasi ini berisi panduan lengkap integrasi dengan Web Service E-Klaim.
-
-## Daftar Isi
-
-- [I. SETUP](./01-setup/index.md)
-- [II. WEB SERVICE](./02-web-service/index.md)
-- [III. ENKRIPSI / DEKRIPSI](./03-enkripsi/index.md)
-- [IV. KATALOG METHOD WEB SERVICE](./04-katalog-method/index.md)
-- [V. DAFTAR KODE ERROR](./05-daftar-error/index.md)
-- [VI. DAFTAR KODE UNGROUPABLE AND UNRELATED](./06-daftar-ungroupable/index.md)
-- [VII. ALUR DASAR INTEGRASI](./07-alur-integrasi/index.md)
-- [IX. ALUR INTEGRASI DENGAN SITB](./08-alur-sitb/index.md)
-- [X. CHANGELOG](./09-changelog/index.md)
-- [XI. KATALOG FUNGSI ENKRIPSI](./10-katalog-enkripsi/index.md)
-- [DAFTAR PUSTAKA](#daftar-pustaka)
-
-## Daftar Gambar
+# Daftar Gambar
 
 Daftar lengkap gambar yang digunakan dalam dokumentasi ini:
 
@@ -45,11 +25,3 @@ Daftar lengkap gambar yang digunakan dalam dokumentasi ini:
 | 13  | ![](/img/manual-webservice/image13.png) | _(Belum digunakan)_    | -                                                                                  |
 | 14  | ![](/img/manual-webservice/image14.png) | Alur Dasar Integrasi   | [VII. ALUR DASAR INTEGRASI](./07-alur-integrasi/index.md)                          |
 | 15  | ![](/img/manual-webservice/image15.png) | Alur Integrasi SITB    | [IX. ALUR INTEGRASI DENGAN SITB](./08-alur-sitb/index.md)                          |
-
-## Daftar Pustaka
-
-[1] Kementerian Kesehatan Republik Indonesia. (2023). Peraturan Menteri Kesehatan Republik Indonesia Nomor 3 Tahun 2023 tentang Standar Tarif Pelayanan Kesehatan dalam Penyelenggaraan Program Jaminan Kesehatan. Jakarta: Kementerian Kesehatan RI.
-
-```
-
-```
