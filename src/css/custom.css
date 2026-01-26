@@ -28,3 +28,27 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Reorder Navbar Items (Right Side) */
+/* Desired Order: Search Bar (1) -> Theme Toggle (2) -> GitHub (3) */
+
+.navbar__items--right {
+  display: flex !important;
+}
+
+/* 1. Search Bar */
+.navbar__items--right > div[class*="navbarSearchContainer"] {
+  order: 1;
+  margin-right: 0.5rem;
+}
+
+/* 2. Theme Toggle */
+.navbar__items--right > div[class*="colorModeToggle"] {
+  order: 2;
+  margin-right: 0.5rem;
+}
+
+/* 3. GitHub Link */
+.navbar__items--right > .navbar__link[href*="github"] {
+  order: 3;
+}
