@@ -40,27 +40,12 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          path: 'manual-webservice',
+          routeBasePath: 'manual-webservice',
+          sidebarPath: './sidebarsManual.ts',
+          editUrl: 'https://github.com/irfans18/eklaim-manws-docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -68,17 +53,7 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'manual-webservice',
-        path: 'manual-webservice',
-        routeBasePath: 'manual-webservice',
-        sidebarPath: './sidebarsManual.ts',
-      },
-    ],
-  ],
+  plugins: [],
 
   themes: [
     [
@@ -86,10 +61,10 @@ const config: Config = {
       {
         hashed: true,
         indexDocs: true,
-        indexBlog: true,
+        indexBlog: false,
         indexPages: false,
-        docsRouteBasePath: ['/docs', '/manual-webservice'],
-        blogRouteBasePath: ['/blog'],
+        docsRouteBasePath: ['/manual-webservice'],
+        blogRouteBasePath: [],
         language: ['en'],
         highlightSearchTermsOnTargetPage: true,
         searchResultLimits: 8,
@@ -111,19 +86,19 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
         {
           to: '/manual-webservice',
           label: 'Manual Web Service',
           position: 'left',
           activeBaseRegex: `/manual-webservice/`,
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -137,10 +112,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            // {
+            //   label: 'Tutorial',
+            //   to: '/docs/intro',
+            // },
           ],
         },
         {
@@ -163,10 +138,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // {
+            //   label: 'Blog',
+            //   to: '/blog',
+            // },
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
