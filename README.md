@@ -1,11 +1,16 @@
-# Website
+# E-Klaim - Manual Web Service
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Documentation for the E-Klaim Manual Web Service. This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+## Prerequisites
+
+- Node.js >= 20.0
+- Yarn package manager
 
 ## Installation
 
 ```bash
-yarn
+yarn install
 ```
 
 ## Local Development
@@ -26,16 +31,29 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+### Using SSH
 
 ```bash
 USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+### Not using SSH
 
 ```bash
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Project Structure
+
+- `docs/` - General documentation files.
+- `manual-webservice/` - Specific documentation for the Manual Web Service, accessible via the sidebar.
+- `src/` - React components and pages.
+- `versioned_docs/` - Documentation for previous versions (e.g., 5.9.x).
+- `docusaurus.config.ts` - Main configuration file for the site.
+
+## Contributing
+
+1.  **Editing**: Updates can be made directly in the markdown files within `manual-webservice/`.
+2.  **Versioning**: This project uses Docusaurus versioning. Historical versions are stored in `versioned_docs/`.
