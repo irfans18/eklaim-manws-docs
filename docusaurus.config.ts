@@ -68,6 +68,36 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'manual-webservice',
+        path: 'manual-webservice',
+        routeBasePath: 'manual-webservice',
+        sidebarPath: './sidebarsManual.ts',
+      },
+    ],
+  ],
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: false,
+        docsRouteBasePath: ['/docs', '/manual-webservice'],
+        blogRouteBasePath: ['/blog'],
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 100,
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -86,6 +116,12 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          to: '/manual-webservice',
+          label: 'Manual Web Service',
+          position: 'left',
+          activeBaseRegex: `/manual-webservice/`,
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
