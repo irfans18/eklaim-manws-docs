@@ -1,4 +1,4 @@
-# 24. Cek Status Klaim
+# 25. Cek Status Klaim
 
 Method ini digunakan untuk mengecek status terakhir klaim, apakah sudah terkirim ke pusat data kementerian kesehatan atau belum.
 

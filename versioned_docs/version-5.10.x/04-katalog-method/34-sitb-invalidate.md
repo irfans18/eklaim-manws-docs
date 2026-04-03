@@ -1,14 +1,14 @@
-# 18. Re-edit coding INACBG
+# 34. Membatalkan validasi Nomor Register SITB
 
 **Request Body:**
 
 ```json
 {
   "metadata": {
-    "method": "inacbg_grouper_reedit"
+    "method": "sitb_invalidate"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "0001R0016120666662"
   }
 }
 ```

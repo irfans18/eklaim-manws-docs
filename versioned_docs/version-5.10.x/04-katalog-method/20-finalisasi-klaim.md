@@ -1,4 +1,4 @@
-# 19. Finalisasi Klaim
+# 20. Finalisasi Klaim
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "claim_final"
   },
   "data": {
-    "nomor_sep": "000R000TEST",
+    "nomor_sep": "000R222TEST",
     "coder_nik": "123123123123"
   }
 }

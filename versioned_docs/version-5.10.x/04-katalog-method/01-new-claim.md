@@ -63,7 +63,7 @@
 **Keterangan parameter:**
 
 - **`nomor_kartu`**: Nomor Kartu peserta JKN
-- **`nomor_sep`**: Nomor SEP. Khusus pasien jenis berikut, Nomor SEP diperoleh dari method [`generate_claim_number`](./31-generate-claim-number.md) (no. 31). Jenisnya yaitu:
+- **`nomor_sep`**: Nomor SEP. Khusus pasien jenis berikut, Nomor SEP diperoleh dari method [`generate_claim_number`](./32-generate-claim-number.md) (no. 31). Jenisnya yaitu:
   - JAMINAN COVID-19
   - JAMINAN KIPI
   - JAMINAN BAYI BARU LAHIR

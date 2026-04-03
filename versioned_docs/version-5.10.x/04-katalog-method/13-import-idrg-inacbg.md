@@ -1,4 +1,4 @@
-# 12. Import Coding iDRG ke INACBG
+# 13. Import Coding iDRG ke INACBG
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "idrg_to_inacbg_import"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```
@@ -24,16 +24,17 @@
   },
   "data": {
     "diagnosa": {
-      "string": "S71.0#S87.9#E11.9",
+      "string": "S73.02#S87.9#E11.9",
       "expanded": [
         {
-          "code": "S71.0",
-          "display": "Open wound of hip",
+          "code": "S73.02",
+          "display": "Dislocation of hip, posterior type with large single fracture (IM)",
           "no": "1",
-          "validcode": "1",
+          "validcode": "0",
           "metadata": {
-            "code": "200",
-            "message": "Ok"
+            "code": "400",
+            "error_no": "E2101",
+            "message": "IM tidak berlaku"
           }
         },
         {
@@ -60,11 +61,11 @@
       ]
     },
     "procedure": {
-      "string": "81.51#86.28#91.799",
+      "string": "81.53#86.28#91.799",
       "expanded": [
         {
-          "code": "81.51",
-          "display": "Total hip replacement",
+          "code": "81.53",
+          "display": "Revision of hip replacement, NEC",
           "no": "1",
           "validcode": "1",
           "metadata": {

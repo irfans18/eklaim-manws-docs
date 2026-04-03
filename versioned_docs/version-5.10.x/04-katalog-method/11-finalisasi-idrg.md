@@ -1,4 +1,4 @@
-# 10. Finalisasi iDRG
+# 11. Finalisasi iDRG
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "idrg_grouper_final"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```

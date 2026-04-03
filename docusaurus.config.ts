@@ -61,21 +61,7 @@ const config: Config = {
   plugins: [],
 
   themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-        indexDocs: true,
-        indexBlog: false,
-        indexPages: false,
-        docsRouteBasePath: ['/manual-webservice'],
-        blogRouteBasePath: [],
-        language: ['en'],
-        highlightSearchTermsOnTargetPage: true,
-        searchResultLimits: 8,
-        searchResultContextMaxLength: 100,
-      },
-    ],
+    '@getcanary/docusaurus-theme-search-pagefind',
   ],
 
   themeConfig: {

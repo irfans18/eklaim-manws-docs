@@ -1,4 +1,4 @@
-# 22. Pengiriman Data Klaim (Individual)
+# 23. Pengiriman Data Klaim (Individual)
 
 Method ini digunakan untuk mengirimkan data-data klaim dari RS ke Center (Data Center Kemenkes) secara satuan per nomor SEP. Proses pengiriman ini dilakukan secara synchronous, artinya ketika method ini dijalankan maka akan menunggu sampai proses kirim data klaim selesai.
 

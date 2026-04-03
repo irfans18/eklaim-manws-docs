@@ -1,4 +1,4 @@
-# 25. Hapus Klaim
+# 26. Hapus Klaim
 
 **Request Body:**
 

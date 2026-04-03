@@ -1,4 +1,4 @@
-# 14. Set Prosedur INACBG
+# 15. Set Prosedur INACBG
 
 **Request Body:**
 
@@ -9,7 +9,7 @@
     "nomor_sep": "000R000TEST"
   },
   "data": {
-    "procedure": "81.51#86.28#91.79"
+    "procedure": "81.53#86.28#91.79"
   }
 }
 ```
@@ -24,11 +24,11 @@
     "method": "inacbg_procedure_set"
   },
   "data": {
-    "string": "81.51#86.28#91.79",
+    "string": "81.53#86.28#91.79",
     "expanded": [
       {
-        "code": "81.51",
-        "display": "Total hip replacement",
+        "code": "81.53",
+        "display": "Revision of hip replacement, NEC",
         "no": "1",
         "validcode": "1",
         "metadata": {

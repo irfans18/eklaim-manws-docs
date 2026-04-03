@@ -6,10 +6,10 @@
 {
   "metadata": {
     "method": "set_claim_data",
-    "nomor_sep": "0001R0016120507422"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
-    "nomor_sep": "0001R0016120507422",
+    "nomor_sep": "000R222TEST",
     "nomor_kartu": "233333",
     "tgl_masuk": "2023-01-25 12:55:00",
     "tgl_pulang": "2023-01-31 09:55:00",
