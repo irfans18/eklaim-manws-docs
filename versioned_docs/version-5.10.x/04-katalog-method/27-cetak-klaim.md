@@ -1,4 +1,4 @@
-# 26. Cetak Klaim
+# 27. Cetak Klaim
 
 Method ini digunakan untuk mengambil file pdf Lembar Berkas Klaim (LBK).
 

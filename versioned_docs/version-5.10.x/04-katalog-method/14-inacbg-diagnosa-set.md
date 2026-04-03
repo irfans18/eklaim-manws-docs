@@ -1,4 +1,4 @@
-# 13. Set Diagnosa INACBG
+# 14. Set Diagnosa INACBG
 
 **Request Body:**
 
@@ -6,10 +6,10 @@
 {
   "metadata": {
     "method": "inacbg_diagnosa_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
-    "diagnosa": "S71.0#S87.0#E11.9"
+    "diagnosa": "S73.0#E11.9"
   }
 }
 ```
@@ -24,22 +24,12 @@
     "method": "inacbg_diagnosa_set"
   },
   "data": {
-    "string": "S71.0#S87.0#E11.9",
+    "string": "S73.0#E11.9",
     "expanded": [
       {
-        "code": "S71.0",
-        "display": "Open wound of hip",
+        "code": "S73.0",
+        "display": "Dislocation of hip",
         "no": "1",
-        "validcode": "1",
-        "metadata": {
-          "code": "200",
-          "message": "Ok"
-        }
-      },
-      {
-        "code": "S87.0",
-        "display": "Crushing injury of knee",
-        "no": "2",
         "validcode": "1",
         "metadata": {
           "code": "200",
@@ -49,7 +39,7 @@
       {
         "code": "E11.9",
         "display": "Non-insulin-dependent diabetes mellitus without complications",
-        "no": "3",
+        "no": "2",
         "validcode": "1",
         "metadata": {
           "code": "200",

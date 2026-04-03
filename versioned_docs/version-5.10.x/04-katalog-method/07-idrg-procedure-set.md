@@ -6,10 +6,10 @@
 {
   "metadata": {
     "method": "idrg_procedure_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
-    "procedure": "81.51#86.28+2#91.799"
+    "procedure": "81.53#86.28+2#91.799"
   }
 }
 ```
@@ -98,7 +98,7 @@ Request Body:
 
 **`procedure`**: Kode procedure akan dicheck terhadap versi ICD-9-IM (Indonesian Modification) yang berlaku. Jika ada kode yang tidak terdaftar atau berlaku, maka kode tersebut tidak akan tersimpan.
 
-Untuk kode diagnosa dan procedure, disediakan method tersendiri untuk pencarian pada method [27](./27-search-diagnosa-idrg.md) dan [28](./28-search-prosedur-idrg.md).
+Untuk kode diagnosa dan procedure, disediakan method tersendiri untuk pencarian pada method [28](./28-search-diagnosa-idrg.md) dan [29](./29-search-prosedur-idrg.md).
 
 Prosedur pada iDRG dapat dicatat berulang dengan menambahkan kode ekstensi dan/atau ditulis beberapa kali (**multiplicity** dan **setting**).
 

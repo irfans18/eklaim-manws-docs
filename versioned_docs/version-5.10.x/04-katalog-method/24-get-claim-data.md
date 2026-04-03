@@ -1,4 +1,4 @@
-# 23. Perolehan Data Klaim
+# 24. Perolehan Data Klaim
 
 **Request Body:**
 

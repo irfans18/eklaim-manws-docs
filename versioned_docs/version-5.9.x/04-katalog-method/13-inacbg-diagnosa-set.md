@@ -6,7 +6,7 @@
 {
   "metadata": {
     "method": "inacbg_diagnosa_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
     "diagnosa": "S71.0#S87.0#E11.9"

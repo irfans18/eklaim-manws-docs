@@ -1,4 +1,4 @@
-# 17. Finalisasi INACBG
+# 18. Finalisasi INACBG
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "inacbg_grouper_final"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```

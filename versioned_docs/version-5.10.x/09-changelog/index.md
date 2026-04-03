@@ -1,5 +1,9 @@
 # X. CHANGELOG
 
+**20260403**
+
+- Penambahan `stage 2` pada method `grouper` iDRG
+
 **20260112**
 
 - Penambahan parameter `alteplase`, `kantong_darah`, `apgar`, dan `persalinan` pada response method `get_claim_data` dengan kondisi tertentu.

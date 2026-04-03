@@ -1,4 +1,4 @@
-# 9. Grouping iDRG Stage 1
+# 10. Grouping iDRG Stage 2
 
 **Request Body:**
 
@@ -6,18 +6,19 @@
 {
   "metadata": {
     "method": "grouper",
-    "stage": 1,
+    "stage": "2",
     "grouper": "idrg"
   },
   "data": {
-    "nomor_sep": "000R222TEST"
+    "nomor_sep": "000R222TEST",
+    "topup_codes": "13031"
   }
 }
 ```
 
 **Keterangan parameter:**
 
-- **`stage`**: diisi “1” (satu)
+- **`stage`**: diisi “2” (dua)
 - **`grouper`**: diisi “idrg”
 
 **Response:**
@@ -41,6 +42,14 @@
     "total_cost_weight": "5.14",
     "nbr": "8037060",
     "status_cd": "normal",
+    "topup": [
+      {
+        "code": "13031",
+        "description": "Hip Implant",
+        "type": "prosthesis",
+        "cost_weight": "1.97019644"
+      }
+    ],
     "topup_options": [
       {
         "code": "13031",
@@ -58,22 +67,9 @@
 ```json
 {
   "metadata": {
-    "code": 200,
-    "message": "Ok"
-  },
-  "response_idrg": {
-    "mdc_number": "36",
-    "mdc_description": "Ungroupable or Unrelated",
-    "drg_code": "3600019",
-    "drg_description": "Unrelated OR Procedures",
-    "script_version": "1.0.29",
-    "logic_version": "0.2.1747.202510161025",
-    "cost_weight": "0.00",
-    "sub_acute_weight": "0.00",
-    "chronic_weight": "0.00",
-    "total_cost_weight": "0",
-    "nbr": "8037060",
-    "status_cd": "normal"
+    "code": 400,
+    "message": "iDRG coding sudah final",
+    "error_no": "E2102"
   }
 }
 ```

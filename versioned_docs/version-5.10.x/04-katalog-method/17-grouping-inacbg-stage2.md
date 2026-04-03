@@ -1,4 +1,4 @@
-# 16. Grouping INACBG Stage 2
+# 17. Grouping INACBG Stage 2
 
 Untuk Grouping Stage 2 ini, jika dari hasil Grouping Stage 1 terdapat pilihan `special_cmg_option`, maka silakan masukkan didalam field `special_cmg`. Jika pilihan bisa dari satu karena dari type yang berbeda maka silakan ditambahkan tanda `#` diantara kode:
 
@@ -12,7 +12,7 @@ Untuk Grouping Stage 2 ini, jika dari hasil Grouping Stage 1 terdapat pilihan `s
     "grouper": "inacbg"
   },
   "data": {
-    "nomor_sep": "0001R0016120666662",
+    "nomor_sep": "000R222TEST",
     "special_cmg": "RR04#YY01"
   }
 }
@@ -53,7 +53,7 @@ Untuk Grouping Stage 2 ini, jika dari hasil Grouping Stage 1 terdapat pilihan `s
       }
     ],
     "kelas": "kelas_3",
-    "inacbg_version": "5.10.5.202509291030",
+    "inacbg_version": "5.10.7.202603311031.dev",
     "status_cd": "normal"
   },
   "special_cmg_option": [

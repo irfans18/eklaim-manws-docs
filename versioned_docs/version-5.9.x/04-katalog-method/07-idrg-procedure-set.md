@@ -72,7 +72,7 @@ Request Body:
 {
   "metadata": {
     "method": "idrg_procedure_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
     "procedure": "#"

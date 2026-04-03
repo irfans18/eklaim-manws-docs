@@ -1,4 +1,4 @@
-# 31. Generate nomor pengajuan klaim
+# 32. Generate nomor pengajuan klaim
 
 Method ini digunakan sebelum `new_claim`.
 
