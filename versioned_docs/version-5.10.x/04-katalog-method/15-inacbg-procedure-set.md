@@ -61,4 +61,22 @@
 }
 ```
 
+**Contoh hapus semua data prosedur**
+
+Request Body:
+
+```json
+{
+  "metadata": {
+    "method": "inacbg_procedure_set",
+    "nomor_sep": "000R000TEST"
+  },
+  "data": {
+    "procedure": "#"
+  }
+}
+```
+
+Mengirim string kosong (`""`) pada `procedure` **bukan** cara menghapus; nilai tersebut diperlakukan sebagai tidak ada perubahan. Untuk menghapus seluruh prosedur, gunakan `"#"` seperti contoh di atas.
+
 **`procedure`**: Kode procedure akan dicheck terhadap versi ICD-9-CM yang berlaku. Jika ada kode yang tidak terdaftar atau berlaku, maka kode tersebut tidak akan tersimpan.
