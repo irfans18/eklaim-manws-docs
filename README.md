@@ -7,6 +7,18 @@ Documentation for the E-Klaim Manual Web Service. This website is built using [D
 - Node.js >= 20.0
 - Yarn package manager
 
+## Environment Variables
+
+Create a `.env` file in the root directory to configure the site variables:
+
+```bash
+URL=https://eklaim-manual-ws.netlify.app
+BASE_URL=/
+EDIT_URL=https://github.com/irfans18/eklaim-manws-docs/tree/main/
+GITHUB_BASE_URL=https://github.com/irfans18/eklaim-manws-docs
+
+```
+
 ## Installation
 
 ```bash

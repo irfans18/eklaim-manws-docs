@@ -1,4 +1,4 @@
-# 21. Pengiriman Data Klaim (Kolektif)
+# 22. Pengiriman Data Klaim (Kolektif)
 
 Method ini digunakan untuk mengirimkan data-data klaim dari RS ke Center (Data Center Kemenkes). Proses pengiriman ini dilakukan secara asynchronous, artinya ketika method ini dijalankan maka tidak serta merta data terkirim saat itu juga, namun data akan “antri” di server E-Klaim RS untuk kemudian dikirimkan oleh background service secara bertahap.
 

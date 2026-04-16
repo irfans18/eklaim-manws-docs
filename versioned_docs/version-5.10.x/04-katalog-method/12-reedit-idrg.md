@@ -1,4 +1,4 @@
-# 11. Re-edit coding iDRG
+# 12. Re-edit coding iDRG
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "idrg_grouper_reedit"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```

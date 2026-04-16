@@ -1,4 +1,4 @@
-# 29. Pencarian diagnosa INACBG
+# 30. Pencarian diagnosa INACBG
 
 **Request Body:**
 

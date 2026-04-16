@@ -1,4 +1,4 @@
-# 20. Re-edit Klaim
+# 21. Re-edit Klaim
 
 **Request Body:**
 
@@ -8,7 +8,7 @@
     "method": "reedit_claim"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```

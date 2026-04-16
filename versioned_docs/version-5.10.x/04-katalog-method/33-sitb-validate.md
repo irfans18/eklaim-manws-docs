@@ -1,4 +1,4 @@
-# 32. Validasi Nomor Register SITB
+# 33. Validasi Nomor Register SITB
 
 Validasi SITB mesti dilakukan ketika terdapat diagnosa TB pada INACBG, dengan kode antara lain: A15.\*, A16.\*, A17.\*, A18.\* atau A19.\*. Berikut cara pemanggilan method.
 

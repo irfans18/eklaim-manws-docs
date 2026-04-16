@@ -15,10 +15,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: process.env.APP_URL || 'http://localhost:3000',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL || '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -43,7 +43,7 @@ const config: Config = {
           path: 'manual-webservice',
           routeBasePath: 'manual-webservice',
           sidebarPath: './sidebarsManual.ts',
-          editUrl: 'https://github.com/irfans18/eklaim-manws-docs/tree/main/',
+          editUrl: process.env.EDIT_URL || 'https://github.com/irfans18/eklaim-manws-docs/tree/main/',
           versions: {
             '5.9.x': {
               banner: 'unmaintained',
@@ -61,21 +61,7 @@ const config: Config = {
   plugins: [],
 
   themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-        indexDocs: true,
-        indexBlog: false,
-        indexPages: false,
-        docsRouteBasePath: ['/manual-webservice'],
-        blogRouteBasePath: [],
-        language: ['en'],
-        highlightSearchTermsOnTargetPage: true,
-        searchResultLimits: 8,
-        searchResultContextMaxLength: 100,
-      },
-    ],
+    '@getcanary/docusaurus-theme-search-pagefind',
   ],
 
   themeConfig: {
@@ -109,7 +95,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/irfans18/eklaim-manws-docs',
+          href: process.env.GITHUB_BASE_URL || 'https://github.com/irfans18/eklaim-manws-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -153,7 +139,7 @@ const config: Config = {
             // },
             {
               label: 'GitHub',
-              href: 'https://github.com/irfans18/eklaim-manws-docs',
+              href: process.env.GITHUB_BASE_URL || 'https://github.com/irfans18/eklaim-manws-docs',
             },
           ],
         },

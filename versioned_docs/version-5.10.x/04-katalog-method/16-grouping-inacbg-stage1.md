@@ -1,4 +1,4 @@
-# 15. Grouping INACBG Stage 1
+# 16. Grouping INACBG Stage 1
 
 **Request Body:**
 
@@ -10,7 +10,7 @@
     "grouper": "inacbg"
   },
   "data": {
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   }
 }
 ```
@@ -36,7 +36,7 @@
     "base_tariff": "31713400",
     "tariff": "31713400",
     "kelas": "kelas_3",
-    "inacbg_version": "5.10.5.202509291030",
+    "inacbg_version": "5.10.7.202603311031.dev",
     "status_cd": "normal"
   },
   "special_cmg_option": [

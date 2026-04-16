@@ -6,10 +6,10 @@
 {
   "metadata": {
     "method": "idrg_diagnosa_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
-    "diagnosa": "S71.0#S87.9#E11.9"
+    "diagnosa": "S73.02#S87.9#E11.9"
   }
 }
 ```
@@ -24,11 +24,11 @@
     "method": "idrg_diagnosa_set"
   },
   "data": {
-    "string": "S71.0#S87.9#E11.9",
+    "string": "S73.02#S87.9#E11.9",
     "expanded": [
       {
-        "code": "S71.0",
-        "display": "Open wound of hip",
+        "code": "S73.02",
+        "display": "Dislocation of hip, posterior type with large single fracture (IM)",
         "no": "1",
         "validcode": "1",
         "metadata": {
@@ -60,5 +60,23 @@
   }
 }
 ```
+
+**Contoh hapus semua data diagnosa**
+
+Request Body:
+
+```json
+{
+  "metadata": {
+    "method": "idrg_diagnosa_set",
+    "nomor_sep": "000R222TEST"
+  },
+  "data": {
+    "diagnosa": "#"
+  }
+}
+```
+
+Untuk menghapus seluruh diagnosa, kirim `"#"` pada parameter `diagnosa`. String kosong `""` tidak menghapus (diperlakukan sebagai tidak ada perubahan).
 
 **`diagnosa`**: Kode diagnosa akan dicheck terhadap versi ICD-10-IM (Indonesian Modification) yang berlaku. Jika ada kode yang tidak terdaftar atau berlaku, maka kode tersebut tidak akan tersimpan.

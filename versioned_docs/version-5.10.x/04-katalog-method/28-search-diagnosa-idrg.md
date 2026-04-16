@@ -1,4 +1,4 @@
-# 27. Pencarian diagnosa IDRG
+# 28. Pencarian diagnosa IDRG
 
 **Request Body:**
 

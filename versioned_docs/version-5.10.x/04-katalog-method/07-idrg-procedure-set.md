@@ -6,10 +6,10 @@
 {
   "metadata": {
     "method": "idrg_procedure_set",
-    "nomor_sep": "000R000TEST"
+    "nomor_sep": "000R222TEST"
   },
   "data": {
-    "procedure": "81.51#86.28+2#91.799"
+    "procedure": "81.53#86.28+2#91.799"
   }
 }
 ```
@@ -80,25 +80,11 @@ Request Body:
 }
 ```
 
-**Contoh cara hapus semua data prosedur yang salah** (karena yang seperti berikut ini berarti tidak ada perubahan):
-
-Request Body:
-
-```json
-{
-  "metadata": {
-    "method": "idrg_procedure_set",
-    "nomor_sep": "000R000TEST"
-  },
-  "data": {
-    "procedure": ""
-  }
-}
-```
+Mengirim string kosong (`""`) pada `procedure` **bukan** cara menghapus; nilai tersebut diperlakukan sebagai tidak ada perubahan. Untuk menghapus seluruh prosedur, gunakan `"#"` seperti contoh di atas.
 
 **`procedure`**: Kode procedure akan dicheck terhadap versi ICD-9-IM (Indonesian Modification) yang berlaku. Jika ada kode yang tidak terdaftar atau berlaku, maka kode tersebut tidak akan tersimpan.
 
-Untuk kode diagnosa dan procedure, disediakan method tersendiri untuk pencarian pada method [27](./27-search-diagnosa-idrg.md) dan [28](./28-search-prosedur-idrg.md).
+Untuk kode diagnosa dan procedure, disediakan method tersendiri untuk pencarian pada method [28](./28-search-diagnosa-idrg.md) dan [29](./29-search-prosedur-idrg.md).
 
 Prosedur pada iDRG dapat dicatat berulang dengan menambahkan kode ekstensi dan/atau ditulis beberapa kali (**multiplicity** dan **setting**).
 
@@ -115,4 +101,4 @@ _Contoh: tindakan debridement yang dilakukan dalam dua operasi dalam satu episod
 
 ![Contoh Multiplicity 2](/img/manual-webservice/image12.png)
 
-Khusus untuk parameter diagnosa dan prosedur disediakan fasilitas untuk menghapus, yaitu dengan tanda `#` (hash), dikarenakan mengirimkan parameter dengan tanpa isi seperti ini `""` berarti tidak ada perubahan.
+Khusus untuk parameter `diagnosa` dan `procedure` pada method `idrg_diagnosa_set`, `idrg_procedure_set`, `inacbg_diagnosa_set`, dan `inacbg_procedure_set`, penghapusan dilakukan dengan mengirim nilai `#` (hash). Mengirim string kosong `""` berarti tidak ada perubahan.
