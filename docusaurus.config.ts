@@ -58,15 +58,22 @@ const config: Config = {
     ],
   ],
 
-  plugins: [],
-
-  themes: [
-    '@getcanary/docusaurus-theme-search-pagefind',
+  plugins: [
+    [
+      '@getcanary/docusaurus-theme-search-pagefind',
+      {
+        indexBlog: false,
+        indexDocs: true,
+        indexPages: false,
+      },
+    ],
   ],
+
+  themes: [],
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo/logo-kemkes-single.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
