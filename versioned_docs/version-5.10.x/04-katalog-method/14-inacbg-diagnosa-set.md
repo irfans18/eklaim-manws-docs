@@ -51,4 +51,22 @@
 }
 ```
 
+**Contoh hapus semua data diagnosa**
+
+Request Body:
+
+```json
+{
+  "metadata": {
+    "method": "inacbg_diagnosa_set",
+    "nomor_sep": "000R222TEST"
+  },
+  "data": {
+    "diagnosa": "#"
+  }
+}
+```
+
+Untuk menghapus seluruh diagnosa, kirim `"#"` pada parameter `diagnosa`. String kosong `""` tidak menghapus (diperlakukan sebagai tidak ada perubahan).
+
 **`diagnosa`**: Kode diagnosa akan dicheck terhadap versi ICD-10 yang berlaku. Jika ada kode yang tidak terdaftar atau berlaku, maka kode tersebut tidak akan tersimpan.
