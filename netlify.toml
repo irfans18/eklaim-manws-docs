@@ -4,3 +4,19 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET, POST, OPTIONS"
     Access-Control-Allow-Headers = "Content-Type"
+
+
+[[redirects]]
+from = "/manual-webservice/pagefind/*"
+to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
+status = 200
+
+[[redirects]]
+from = "/manual-webservice/assets/*"
+to = "https://inacbg.kemkes.go.id/e-klaim-doc/assets/:splat"
+status = 200
+
+[[redirects]]
+from = "/manual-webservice/*"
+to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
+status = 200
