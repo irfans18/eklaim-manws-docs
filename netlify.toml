@@ -1,3 +1,6 @@
+# =========================
+# HEADERS (CORS SUPPORT)
+# =========================
 [[headers]]
   for = "/*"
   [headers.values]
@@ -5,17 +8,42 @@
     Access-Control-Allow-Methods = "GET, POST, OPTIONS"
     Access-Control-Allow-Headers = "Content-Type"
 
-[[redirects]]
-from = "/manual-webservice/pagefind/*"
-to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
-status = 302
 
-[[redirects]]
-from = "/manual-webservice/assets/*"
-to = "https://inacbg.kemkes.go.id/e-klaim-doc/assets/:splat"
-status = 200
+# =========================
+# PAGEFIND FIX
+# =========================
 
+# jika browser request /pagefind/*
 [[redirects]]
-from = "/manual-webservice/*"
-to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
-status = 200
+  from = "/pagefind/*"
+  to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
+  status = 302
+  force = true
+
+
+# jika browser request /manual-webservice/pagefind/*
+[[redirects]]
+  from = "/manual-webservice/pagefind/*"
+  to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
+  status = 302
+  force = true
+
+
+# =========================
+# ASSETS
+# =========================
+[[redirects]]
+  from = "/manual-webservice/assets/*"
+  to = "https://inacbg.kemkes.go.id/e-klaim-doc/assets/:splat"
+  status = 200
+  force = true
+
+
+# =========================
+# MAIN PROXY
+# =========================
+[[redirects]]
+  from = "/manual-webservice/*"
+  to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
+  status = 200
+  force = true
