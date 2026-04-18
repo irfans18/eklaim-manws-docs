@@ -61,17 +61,7 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@getcanary/docusaurus-theme-search-pagefind',
-      {
-        indexBlog: false,
-        indexDocs: true,
-        indexPages: false,
-        basePath: '/e-klaim-doc',
-      },
-    ],
-  ],
+  plugins: [],
 
   // scripts: [
   //   {
