@@ -65,6 +65,7 @@ const config: Config = {
         indexBlog: false,
         indexDocs: true,
         indexPages: false,
+        basePath: '/e-klaim-doc',
       },
     ],
   ],
