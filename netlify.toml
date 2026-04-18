@@ -28,3 +28,4 @@ status = 200
 from = "/pagefind/*"
 to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
 status = 200
+force = true
