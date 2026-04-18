@@ -70,6 +70,16 @@ const config: Config = {
     ],
   ],
 
+  scripts: [
+    {
+      src: "/pagefind/pagefind-ui.js",
+      async: true,
+    },
+  ],
+  clientModules: [
+    require.resolve("./src/pagefind-fix.js"),
+  ],
+
   themes: [],
 
   themeConfig: {
