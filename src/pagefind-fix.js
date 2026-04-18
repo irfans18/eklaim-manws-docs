@@ -1,3 +1,10 @@
 if (typeof window !== "undefined") {
-    window.__PAGEFIND_BASE_PATH__ = "/e-klaim-doc/pagefind/";
+    window.addEventListener("DOMContentLoaded", async () => {
+      const PagefindUI = (await import("@pagefind/default-ui")).default;
+  
+      new PagefindUI({
+        element: "#search",
+        basePath: "/e-klaim-doc/pagefind"
+      });
+    });
   }
