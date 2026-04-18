@@ -44,11 +44,11 @@ function HomepageHeader() {
               Kementerian Kesehatan Republik Indonesia
             </span>
           </div>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <span className="inline-flex items-center rounded-full bg-green-100 px-4 py-1.5 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-300">
               Digunakan oleh 3000+ Rumah Sakit di Indonesia
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
