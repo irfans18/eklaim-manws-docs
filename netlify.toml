@@ -22,3 +22,9 @@ status = 200
 from = "/e-klaim-doc/*.wasm"
 to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
 status = 200
+
+# fallback (VERY IMPORTANT)
+[[redirects]]
+from = "/pagefind/*"
+to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
+status = 200
