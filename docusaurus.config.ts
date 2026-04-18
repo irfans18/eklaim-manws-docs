@@ -16,7 +16,8 @@ const config: Config = {
 
   // Set the production url of your site here
   url: process.env.APP_URL || 'http://localhost:3000',
-  // Set the /<baseUrl>/ pathname under which your site is served
+  // Set the /<baseUrl>/ pathname under which your site
+  //  is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL || '/',
   trailingSlash: false,
@@ -72,12 +73,12 @@ const config: Config = {
     ],
   ],
 
-  scripts: [
-    {
-      src: "/pagefind/pagefind-ui.js",
-      async: true,
-    },
-  ],
+  // scripts: [
+  //   {
+  //     src: "/pagefind/pagefind-ui.js",
+  //     async: true,
+  //   },
+  // ],
   clientModules: [
     require.resolve("./src/pagefind-fix.js"),
   ],
