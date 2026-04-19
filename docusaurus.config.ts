@@ -63,21 +63,9 @@ const config: Config = {
 
   plugins: [],
 
-  // scripts: [
-  //   {
-  //     src: "/pagefind/pagefind-ui.js",
-  //     async: true,
-  //   },
-  // ],
-  clientModules: [
-    require.resolve("./src/pagefind-fix.js"),
-  ],
-
-  themes: [],
-
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/logo/logo-kemkes-single.svg',
+    image: 'img/logo/logo-kemkes-full.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -160,6 +148,14 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID ?? 'YOUR_APP_ID',
+      apiKey: process.env.ALGOLIA_SEARCH_API_KEY ?? 'YOUR_SEARCH_API_KEY',
+      indexName: process.env.ALGOLIA_INDEX_NAME ?? 'YOUR_INDEX_NAME',
+      contextualSearch: true,
+      searchParameters: {},
+      searchPagePath: 'search',
     },
   } satisfies Preset.ThemeConfig,
 };
