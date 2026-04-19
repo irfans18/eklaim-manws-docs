@@ -18,8 +18,8 @@
 
 **Keterangan parameter:**
 
-- **`stage`**: diisi “2” (dua)
-- **`grouper`**: diisi “idrg”
+- **`stage`**: diisi "2" (dua)
+- **`topup_codes`**: diisi dengan code yang diperoleh dari grouping stage 1 pada segment `topup_options`. Untuk mengisi lebih dari satu pilihan spesial_cmg, code-nya dijoin dengan tanda `#`.
 
 **Response:**
 
@@ -62,18 +62,6 @@
 }
 ```
 
-**Jika hasil grouping adalah error:**
-
-```json
-{
-  "metadata": {
-    "code": 400,
-    "message": "iDRG coding sudah final",
-    "error_no": "E2102"
-  }
-}
-```
-
-**Semua hasil grouping yang error pada idrg diawali dengan kode 36.** Ketika hasil groupingnya error maka tombol final tidak boleh muncul sehingga tidak bisa lanjut koding inacbg.
+Jika dari hasil grouper stage 1 tidak muncul parameter `topup_options`, maka tidak perlu melakukan grouper stage 2.
 
 Referensi kode error idrg dapat dilihat pada [daftar kode ungroupable and unrelated](../06-daftar-ungroupable/index.md).
