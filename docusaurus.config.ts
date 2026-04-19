@@ -16,16 +16,19 @@ const config: Config = {
 
   // Set the production url of your site here
   url: process.env.APP_URL || 'http://localhost:3000',
-  // Set the /<baseUrl>/ pathname under which your site is served
+  // Set the /<baseUrl>/ pathname under which your site
+  //  is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL || '/',
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -58,15 +61,16 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@getcanary/docusaurus-theme-search-pagefind',
-      {
-        indexBlog: false,
-        indexDocs: true,
-        indexPages: false,
-      },
-    ],
+  plugins: [],
+
+  // scripts: [
+  //   {
+  //     src: "/pagefind/pagefind-ui.js",
+  //     async: true,
+  //   },
+  // ],
+  clientModules: [
+    require.resolve("./src/pagefind-fix.js"),
   ],
 
   themes: [],

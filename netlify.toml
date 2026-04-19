@@ -1,21 +1,38 @@
+# =========================
+# HEADERS (optional, keep if you need CORS)
+# =========================
 [[headers]]
-  for = "/*"
+for = "/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type"
+  Access-Control-Allow-Origin = "*"
+  Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+  Access-Control-Allow-Headers = "Content-Type"
 
+
+# =========================
+# 🔥 CRITICAL: PAGEFIND (MUST BE FIRST)
+# =========================
 [[redirects]]
-from = "/manual-webservice/pagefind/*"
+from = "/pagefind/*"
 to = "https://inacbg.kemkes.go.id/e-klaim-doc/pagefind/:splat"
-status = 302
-
-[[redirects]]
-from = "/manual-webservice/assets/*"
-to = "https://inacbg.kemkes.go.id/e-klaim-doc/assets/:splat"
 status = 200
+force = true
 
+
+# =========================
+# MAIN REVERSE PROXY
+# =========================
 [[redirects]]
-from = "/manual-webservice/*"
+from = "/e-klaim-doc/*"
 to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
+status = 200
+force = true
+
+
+# =========================
+# OPTIONAL: SPA FALLBACK (Docusaurus)
+# =========================
+[[redirects]]
+from = "/*"
+to = "/index.html"
 status = 200
