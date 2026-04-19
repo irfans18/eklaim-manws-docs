@@ -27,8 +27,8 @@ const config: Config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  // onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -62,6 +62,21 @@ const config: Config = {
   ],
 
   plugins: [],
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        // Offline index (Algolia DocSearch requires real APP_ID / API keys in .env)
+        hashed: true,
+        docsRouteBasePath: 'manual-webservice',
+        docsDir: 'manual-webservice',
+        // Indonesian docs: no lunr stemmer for `id`; allow prefix / partial matches (e.g. "prosed" → prosedur)
+        removeDefaultStemmer: true,
+        highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+  ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -149,14 +164,8 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    algolia: {
-      appId: process.env.ALGOLIA_APP_ID ?? 'YOUR_APP_ID',
-      apiKey: process.env.ALGOLIA_SEARCH_API_KEY ?? 'YOUR_SEARCH_API_KEY',
-      indexName: process.env.ALGOLIA_INDEX_NAME ?? 'YOUR_INDEX_NAME',
-      contextualSearch: true,
-      searchParameters: {},
-      searchPagePath: 'search',
-    },
+    // Algolia DocSearch: only enable when ALGOLIA_* env vars are set (otherwise search returns nothing).
+    // Local search is provided by @easyops-cn/docusaurus-search-local in `themes` above.
   } satisfies Preset.ThemeConfig,
 };
 

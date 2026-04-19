@@ -2,8 +2,8 @@
 
 Berikut adalah contoh implementasi fungsi enkripsi dan dekripsi untuk berbagai bahasa pemrograman:
 
-- [PHP](php)
-- [C#](csharp)
-- [VB.NET](vbnet)
-- [JavaScript](javascript)
-- [Python](python)
+- [PHP](./php.md)
+- [C#](./csharp.md)
+- [VB.NET](./vbnet.md)
+- [JavaScript](./javascript.md)
+- [Python](./python.md)
