@@ -1,6 +1,30 @@
-# =========================
-# HEADERS (optional, keep if you need CORS)
-# =========================
+# =============================================================================
+# Deployment: kemkes reverse proxy → Netlify origin
+# =============================================================================
+# Browser (canonical): https://inacbg.kemkes.go.id/e-klaim-doc
+# Static host:        https://eklaim-manual-ws.netlify.app
+#
+# Configure the proxy on inacbg.kemkes.go.id so it forwards to the Netlify site
+# and strips the `/e-klaim-doc` prefix on upstream requests. Example mapping:
+#   GET /e-klaim-doc/assets/main.js  →  GET https://eklaim-manual-ws.netlify.app/assets/main.js
+#
+# Production builds use BASE_URL=/e-klaim-doc/ so HTML links and Pagefind resolve
+# under `/e-klaim-doc/` on kemkes while files stay at `/assets`, `/manual-webservice`,
+# `/pagefind`, etc. on Netlify (after the prefix is stripped).
+# Deploy Previews omit BASE_URL so previews work at the site root.
+# =============================================================================
+
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[context.production.environment]
+  APP_URL = "https://inacbg.kemkes.go.id"
+  BASE_URL = "/e-klaim-doc/"
+
 [[headers]]
 for = "/*"
   [headers.values]
@@ -8,20 +32,7 @@ for = "/*"
   Access-Control-Allow-Methods = "GET, POST, OPTIONS"
   Access-Control-Allow-Headers = "Content-Type"
 
-
-# =========================
-# MAIN REVERSE PROXY
-# =========================
-[[redirects]]
-from = "/e-klaim-doc/*"
-to = "https://inacbg.kemkes.go.id/e-klaim-doc/:splat"
-status = 200
-force = true
-
-
-# =========================
-# OPTIONAL: SPA FALLBACK (Docusaurus)
-# =========================
+# Prefer real files when present; SPA fallback for unknown client routes
 [[redirects]]
 from = "/*"
 to = "/index.html"
