@@ -14,11 +14,14 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
-  url: process.env.APP_URL || 'http://localhost:3000',
-  // Set the /<baseUrl>/ pathname under which your site
-  //  is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Canonical URL: production uses kemkes (Netlify `context.production.environment`).
+  // Deploy Previews: prefer Netlify-provided URLs when APP_URL is unset.
+  url:
+    process.env.APP_URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    process.env.URL ||
+    'http://localhost:3000',
+  // Production behind kemkes: `/e-klaim-doc/` (proxy strips prefix when calling Netlify).
   baseUrl: process.env.BASE_URL || '/',
   trailingSlash: false,
 
@@ -63,20 +66,7 @@ const config: Config = {
 
   plugins: [],
 
-  themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        // Offline index (Algolia DocSearch requires real APP_ID / API keys in .env)
-        hashed: true,
-        docsRouteBasePath: 'manual-webservice',
-        docsDir: 'manual-webservice',
-        // Indonesian docs: no lunr stemmer for `id`; allow prefix / partial matches (e.g. "prosed" → prosedur)
-        removeDefaultStemmer: true,
-        highlightSearchTermsOnTargetPage: true,
-      },
-    ],
-  ],
+  themes: [require.resolve('@getcanary/docusaurus-theme-search-pagefind')],
 
   themeConfig: {
     // Replace with your project's social card
@@ -106,6 +96,10 @@ const config: Config = {
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'docsVersionDropdown',
+          position: 'right',
+        },
+        {
+          type: 'search',
           position: 'right',
         },
         {
@@ -165,7 +159,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     // Algolia DocSearch: only enable when ALGOLIA_* env vars are set (otherwise search returns nothing).
-    // Local search is provided by @easyops-cn/docusaurus-search-local in `themes` above.
+    // Local search is provided by @getcanary/docusaurus-theme-search-pagefind (Pagefind) in `themes` above.
   } satisfies Preset.ThemeConfig,
 };
 

@@ -12,12 +12,14 @@ Documentation for the E-Klaim Manual Web Service. This website is built using [D
 Create a `.env` file in the root directory to configure the site variables:
 
 ```bash
-URL=https://eklaim-manual-ws.netlify.app
+APP_URL=http://localhost:3000
 BASE_URL=/
 EDIT_URL=https://github.com/irfans18/eklaim-manws-docs/tree/main/
 GITHUB_BASE_URL=https://github.com/irfans18/eklaim-manws-docs
-
 ```
+
+Production builds on Netlify set `APP_URL` and `BASE_URL` via `netlify.toml` so the site matches the public URL **https://inacbg.kemkes.go.id/e-klaim-doc** (reverse proxy origin: **https://eklaim-manual-ws.netlify.app**). The kemkes proxy must strip the `/e-klaim-doc` path segment when forwarding to Netlify.
+
 
 ## Installation
 
